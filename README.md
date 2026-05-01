@@ -33,9 +33,12 @@ The figure below is a summary table of the dataset. Note that the categorical/nu
  
 <img width="468" height="371" alt="image" src="https://github.com/user-attachments/assets/dd2e464f-51db-43b4-9b7e-70030cbeb19a" />
 
+
 <img width="468" height="401" alt="image" src="https://github.com/user-attachments/assets/16750c3f-132c-4679-bae3-93976e08e1d1" />
 
+
 <img width="468" height="252" alt="image" src="https://github.com/user-attachments/assets/ddc8fa5d-d80a-40fb-a155-84f42900bbfb" />
+
 
 <img width="468" height="354" alt="image" src="https://github.com/user-attachments/assets/42447bd6-478e-46be-b943-fc70c94b3264" />
 
@@ -44,9 +47,11 @@ The figure below is a portion of a pairplot, which was meant to show relationshi
  
 <img width="529" height="490" alt="image" src="https://github.com/user-attachments/assets/d48b454d-fb31-4e76-87b4-51a94b8c8e11" />
 
+
 Below is a bar graph that shows the dataset target classes are imbalanced.
 
 <img width="280" height="257" alt="image" src="https://github.com/user-attachments/assets/bae478fa-bee1-44f5-baf4-7d8b4e5716f4" />
+
 
 ### Problem Formulation
 - Input / Output
@@ -63,6 +68,7 @@ Below is a bar graph that shows the dataset target classes are imbalanced.
   - The following were the hyperparameters used for XGBoost. 
 <img width="377" height="188" alt="image" src="https://github.com/user-attachments/assets/64dce9a2-43f4-4c3e-972d-0f14299ff8b5" />
 
+
 ### Training
 For the baseline models, the dataset was split 70% for training and 30% for testing. Multiple models were trained by using dictionaries of classifiers.
 As improvement to the model became the focus, the train/test split was switch to 80/20 in consideration for the minimal number of observations, ~3000. To address the class imbalance, stratification and oversampling was implemented. SMOTE was also tested, but it was found that oversampling performed better.
@@ -74,14 +80,17 @@ Below is table of metrics for the models trained. From the table, Decision Tree 
 
 <img width="333" height="361" alt="image" src="https://github.com/user-attachments/assets/c9ba439e-34c1-461b-a6e2-51c4c9870ffb" />
 
+
 The finalized model was the XGBoost model, making use of the full set of features with oversampling applied to address the imbalance. This model was trained using the 80/20 stratified split. The macro average scores seen in the table above, showcase how the model’s performance was balanced. This is further seen in the generated classification report.
 Below is the Confusion Matrix for the final model.
 
 <img width="439" height="384" alt="image" src="https://github.com/user-attachments/assets/07949bb4-0cef-40e4-bf25-b37826c94060" />
 
+
 Below is the classification report for the final model.
 
 <img width="407" height="213" alt="image" src="https://github.com/user-attachments/assets/80373d02-5f71-4051-a6f3-2ea4505a51fa" />
+
 
 ### Conclusions
 Of the models trained, XGBoost, trained using the full set of features and oversampling to address imbalance, did the best at predicting the housing sales price category.  
@@ -105,4 +114,3 @@ Data is from the Ames, Iowa Tax Assessor Office; with the dataset being shared t
 
 ## Citations
 -Thapa, S., *Ames Housing Dataset *, WWW.KAGGLE.COM, 2023, https://www.kaggle.com/datasets/shashanknecrothapa/ames-housing-dataset/data.
-<img width="468" height="654" alt="image" src="https://github.com/user-attachments/assets/dd33b72e-e153-4e1c-80ee-9fe91fccdee7" />
